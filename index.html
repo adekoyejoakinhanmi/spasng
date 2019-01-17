@@ -10,15 +10,17 @@
   <link rel="stylesheet" href="./css/main.less">
 </head>
 <body>
-  <div>
-    <p>Need help with booking? Call 0808888268 or 01470000</p>
-    <div>
-      <i>F</i>
-      <i>T</i>
+  <div class="contact-topbar">
+    <div class="container flex-space-between">
+      <span>Need help with booking? Call 0808888268 or 01470000</span>
+      <div>
+        <i>F</i>
+        <i>T</i>
+      </div>
     </div>
   </div>
 
-  <header>
+  <header class="container top-header flex-space-between">
     <a href="#">
       <img src="./assets/imgs/logo.svg" alt="SPASNG logo">
     </a>
@@ -26,189 +28,217 @@
     <input type="text" name="search bar" id="search-bar" placeholder="Search for a Service Spa or Location">
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Hair care</a>
-    <a href="#">Massage</a>
-    <a href="#">Skin care</a>
-    <a href="#">Salon</a>
-    <a href="#">Beauty Services</a>
-    <a href="#">Gym & Fitness</a>
-    <a href="#">Make up</a>
-    <a href="#">Manicure</a>
-    <a href="#">Pedicure</a>
-    <a href="#">Exfoliation</a>
+  <nav class="top-nav">
+    <ul class="container flex-space-between">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Hair care</a></li>
+      <li><a href="#">Massage</a></li>
+      <li><a href="#">Skin care</a></li>
+      <li><a href="#">Salon</a></li>
+      <li><a href="#">Beauty Services</a></li>
+      <li><a href="#">Gym & Fitness</a></li>
+      <li><a href="#">Make up</a></li>
+      <li><a href="#">Manicure</a></li>
+      <li><a href="#">Pedicure</a></li>
+      <li><a href="#">Exfoliation</a></li>
+    </ul>
   </nav>
 
-  <main>
-    <section>
+  <main class="has-overlay has-overlay-image">
+    <div class="gradient-overlay"></div>
+    <section class="container">
       <h1>Book Spa sessions online across Nigeria</h1>
-      <h3>Search through 5,067 of the best beauty services and salons in Nigeria</h3>
-
-      <a href="#">Explore Popular Spas</a>
+      <p>Search through 5,067 of the best beauty services and salons in Nigeria</p>
+      <a class="btn btn-white wide" href="#">Explore Popular Spas</a>
     </section>
+
+    <div class="features-bar container">
+        <ul class="features">
+          <li>
+            <div>
+              <img src="./assets/imgs/svg/003-powder.svg">
+              <span>Matt Effect</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="./assets/imgs/svg/002-shower.svg">
+              <span>Sauna Ready</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="./assets/imgs/svg/004-yoga.svg">
+              <span>Relax Zones</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="./assets/imgs/svg/001-spa.svg">
+              <span>Natural Mask</span>
+            </div>
+          </li>
+        </ul>
+      </div>
   </main>
 
-  <article>
-    <section>
-      <div>
-        <h2>Hair and Nails</h2>
+  <article class="promotion-area">
+    <section class="container promotion-wrapper">
+      <div class="promotion-item">
+        <h2 class="heading-text">Hair and Nails</h2>
         <p>The best spa collections who offer the best hair and nail services in Lagos. Some more descriptive text here.</p>
-        <button>See more</button>
+        <button class="btn btn-primary">See more</button>
       </div>
 
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
-      </div>
-
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
+      <div class="promotion-item center-item">
+        <div class="promotion-overlay"></div>
+        <div class="promotion-image" style="background-image: url('./assets/imgs/spa-box-sample.png')"></div>
       </div>
       
-      <div>
-        <div>
+      <div class="promotion-item hide-on-sm">
+        <div class="promotion-overlay">
           <p>from N5,000</p>
           <h4>George towns place</h4>
           <small>Sabo, Yaba</small>
         </div>
-        <img src="#" alt="Promo image">
+        <div class="promotion-image" style="background-image:url('./assets/imgs/spa-three.jpg')"></div>
       </div>
       
-      <div>
-        <div>
+      <div class="promotion-item hide-on-sm">
+        <div class="promotion-overlay">
           <p>from N5,000</p>
           <h4>George towns place</h4>
           <small>Sabo, Yaba</small>
         </div>
-        <img src="#" alt="Promo image">
+        <div class="promotion-image" style="background-image: url('./assets/imgs/spa.jpg')"></div>
       </div>
 
-    </section>
-    
-    <section>
-      <div>
-        <div>
+      <div class="promotion-item hide-on-sm">
+        <div class="promotion-overlay">
           <p>from N5,000</p>
           <h4>George towns place</h4>
           <small>Sabo, Yaba</small>
         </div>
-        <img src="#" alt="Promo image">
-      </div>
-
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
-      </div>
-      
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
-      </div>
-      
-      <div>
-        <h2>Relaxing Massage</h2>
-        <p>Curated list of Spas that offer the best massage in the country. Some descriptive text goes here.</p>
-        <button>See more</button>
-      </div>
-
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
-      </div>
-
-    </section>
-    
-    <section>
-      <div>
-        <h2>Soothing Stones</h2>
-        <p>Curated list of Spas that offer the best massage in the country. Some descriptive text goes here.</p>
-        <button>See more</button>
-      </div>
-
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
-      </div>
-
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
-      </div>
-      
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
-      </div>
-
-      <div>
-        <div>
-          <p>from N5,000</p>
-          <h4>George towns place</h4>
-          <small>Sabo, Yaba</small>
-        </div>
-        <img src="#" alt="Promo image">
+        <div class="promotion-image" style="background-image: url('./assets/imgs/spa-four.jpg')"></div>
       </div>
 
     </section>
   </article>
 
-  <section>
-    <h2>Get the latest Spa deals first</h2>
-    <p>We curate the best prices weekly and send them to our subscribers. Enter your email below and never miss out.</p>
-    <input type="text" name="email campaign" id="email-campaign" placeholder="Enter email address">
-    <button>Subscribe</button>
+  <article class="promotion-area">
+    <section class="container promotion-wrapper">
+      
+      <div class="promotion-item hide-on-sm">
+        <div class="promotion-overlay">
+          <p>from N5,000</p>
+          <h4>George towns place</h4>
+          <small>Sabo, Yaba</small>
+        </div>
+        <div class="promotion-image" style="background-image:url('./assets/imgs/spa-four.jpg')"></div>
+      </div>
+
+      <div class="promotion-item center-item hide-on-sm">
+        <div class="promotion-overlay"></div>
+        <div class="promotion-image" style="background-image: url('./assets/imgs/spa-box-sample.png')"></div>
+      </div>
+      
+      <div class="promotion-item">
+          <h2 class="heading-text">Relaxing Massage</h2>
+          <p>Curated list of Spas that offer the best massage in the country. Some descriptive text goes here.</p>
+          <button class="btn btn-primary">See more</button>
+      </div>
+
+      <div class="promotion-item">
+        <div class="promotion-overlay">
+          <p>from N5,000</p>
+          <h4>George towns place</h4>
+          <small>Sabo, Yaba</small>
+        </div>
+        <div class="promotion-image" style="background-image: url('./assets/imgs/spa.jpg')"></div>
+      </div>
+
+      <div class="promotion-item hide-on-sm">
+        <div class="promotion-overlay">
+          <p>from N5,000</p>
+          <h4>George towns place</h4>
+          <small>Sabo, Yaba</small>
+        </div>
+        <div class="promotion-image" style="background-image: url('./assets/imgs/spa-two.jpg')"></div>
+      </div>
+
+    </section>
+  </article>
+
+  <article class="promotion-area">
+      <section class="container promotion-wrapper">
+        <div class="promotion-item">
+          <h2 class="heading-text">Soothing Stones</h2>
+          <p>The best spa collections who offer the best hair and nail services in Lagos. Some more descriptive text here.</p>
+          <button class="btn btn-primary">See more</button>
+        </div>
+  
+        <div class="promotion-item center-item">
+          <div class="promotion-overlay"></div>
+          <div class="promotion-image" style="background-image: url('./assets/imgs/spa-box-sample.png')"></div>
+        </div>
+        
+        <div class="promotion-item hide-on-sm">
+          <div class="promotion-overlay">
+            <p>from N5,000</p>
+            <h4>George towns place</h4>
+            <small>Sabo, Yaba</small>
+          </div>
+          <div class="promotion-image" style="background-image:url('./assets/imgs/spa-three.jpg')"></div>
+        </div>
+        
+        <div class="promotion-item hide-on-sm">
+          <div class="promotion-overlay">
+            <p>from N5,000</p>
+            <h4>George towns place</h4>
+            <small>Sabo, Yaba</small>
+          </div>
+          <div class="promotion-image" style="background-image: url('./assets/imgs/spa.jpg')"></div>
+        </div>
+  
+        <div class="promotion-item hide-on-sm">
+          <div class="promotion-overlay">
+            <p>from N5,000</p>
+            <h4>George towns place</h4>
+            <small>Sabo, Yaba</small>
+          </div>
+          <div class="promotion-image" style="background-image: url('./assets/imgs/spa-four.jpg')"></div>
+        </div>
+  
+      </section>
+    </article>
+
+  <section class="cta has-overlay has-overlay-image">
+    <div class="gradient-overlay"></div>
+    <div class="container">
+      <h2 class="h1">Get the latest Spa deals first</h2>
+      <p>We curate the best prices weekly and send them to our subscribers. Enter your email below and never miss out.</p>
+      <input type="text" name="email campaign" id="email-campaign" placeholder="Enter email address">
+      <button class="btn">Subscribe</button>
+    </div>
   </section>
 
   <footer>
-    <section>
-      <div>
-        <img src="./assets/imgs/logo.svg" alt="Logo">
+    <section class="container">
+      <div class="brand-description">
+        <h1>
+          <img src="./assets/imgs/logo.svg" alt="Logo">
+        </h1>
 
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
           Porro in totam, ea placeat velit autem perferendis nobis 
-          dolores optio nostrum nulla repellendus ut doloremque 
-          vitae vero facilis commodi quaerat quasi. </p>
+          dolores. </p>
       </div>
 
-      <div>
-        <h5>Quick Navigation</h5>
+      <div class="footer-item">
+        <h4>Quick Navigation</h4>
 
-        <nav>
+        <nav class="footer-nav">
           <a href="#">About Us</a>
           <a href="#">Contact</a>
           <a href="#">FAQ</a>
@@ -217,10 +247,10 @@
         </nav>
       </div>
 
-      <div>
-        <h5>Other Links</h5>
+      <div class="footer-item">
+        <h4>Other Links</h4>
 
-        <nav>
+        <nav class="footer-nav">
           <a href="#">Terms and Conditions</a>
           <a href="#">Return, Refund & D&C Policy</a>
           <a href="#">Login</a>
@@ -229,10 +259,10 @@
         </nav>
       </div>
       
-      <div>
-        <h5>Social Media</h5>
+      <div class="footer-item">
+        <h4>Social Media</h4>
 
-        <nav>
+        <nav class="footer-nav">
           <a href="#">Facebook</a>
           <a href="#">Twitter</a>
           <a href="#">Instagram</a>
@@ -240,7 +270,9 @@
       </div>
     </section>
 
-    <p>2017 &copy; Spas.ng. All rights reserved.</p>
+    <div class="container">
+      <p>2017 &copy; Spas.ng. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
