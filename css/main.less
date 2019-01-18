@@ -241,10 +241,14 @@ main{
         text-transform: uppercase;
         font-size: @small-font-size;
 
-        height: 100px;
-
-        &:nth-of-type(odd) {
-          box-shadow: 1px 0px 0px rgba(114, 96, 112, 0.2);
+        height: 96%;
+        
+        @media (min-width: 560px) {
+          height: 100%;
+          box-shadow: 1px 0px 0px rgba(114, 96, 112, 0.15);
+          &:last-of-type{
+            box-shadow: none;
+          }
         }
 
         img{
@@ -254,6 +258,15 @@ main{
         }
         
       }
+
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 150px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      bottom: -75px;
     }
   }
 }
@@ -311,7 +324,22 @@ main{
       grid-row: span 2;
     }
   }
-  @media (min-width: 768px) {
+  }
+  
+  @media (min-width: 481px) and (max-width: 767px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: @tiny-space;
+    padding: @tiny-space
+  }
+
+  @media (min-width: 768px) and (max-width: 997px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-gap: @tiny-space
+  }
+
+  @media (min-width: 998px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -323,8 +351,11 @@ main{
 }
 .promotion-area{
   padding: @large-space 0;
-  @media (min-width: 768px) {
-    padding: 7rem 0
+  @media (min-width: 768px) and (max-width: 997px) {
+    padding: 4.5rem 0
+  }
+  @media (min-width: 998px) {
+    padding: 5.5rem 0
   }
 }
 .promotion-area:nth-of-type(odd) {
@@ -401,6 +432,13 @@ section.cta {
     color: #fff;
     text-shadow: @text-shadow;
     text-align: center;
+
+    @media (min-width: 998px) {
+      padding: 3.125rem 15.625rem;
+    }
+    @media (min-width: 768px) and (max-width: 997px) {
+      padding: 3.125rem 9.375rem;
+    }
   }
 }
 
@@ -410,6 +448,11 @@ footer {
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: @medium-space;
+    }
+    @media (min-width: 560px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       grid-gap: @medium-space;
     }
   }
