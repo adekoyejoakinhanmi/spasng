@@ -22,7 +22,7 @@ body{
 
 .container{
   width: 96%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -143,6 +143,10 @@ a{
     }
   }
 
+  .form-input{
+    min-width: 20rem;
+  }
+
 }
 
 
@@ -151,6 +155,7 @@ a{
 .top-nav{
   background: @gray-1;
   padding: @tiny-space;
+  color: @soft-violet;
 
   ul {
     display: flex;
@@ -164,7 +169,7 @@ a{
       text-transform: uppercase;
     }
   }
-  @media (min-width: 560px) and (max-width: 1100px) {
+  @media (min-width: 481px) and (max-width: 1100px) {
     display: block;
   }
 
@@ -174,6 +179,7 @@ a{
   background: @gray-1;
   padding: @tiny-space;
   transition: all 1s ease;
+  color: @soft-violet
 }
 
 
@@ -211,7 +217,7 @@ main{
     text-align: center;
 
     @media (min-width: 768px) {
-      padding: 9rem 0;
+      padding: 9rem 0 13rem;
     }
   }
 
@@ -222,8 +228,8 @@ main{
     z-index: 50;
     background: white;
     bottom: -120px;
-
-    padding: 2px;
+    
+    padding: 5px;
 
     ul.features{
       height: 240px;
@@ -233,7 +239,7 @@ main{
 
       li{
         display: block;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         text-align: center;
         display: flex;
         align-items: center;
@@ -319,12 +325,17 @@ main{
       margin: 0;
       min-height: 13em;
     }
-  }
-  .promotion-item.center-item{
-    @media (min-width: 768px) {
-      grid-row: span 2;
+
+    &.promotion-description{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-  }
+    &.center-item{
+      @media (min-width: 998px) {
+        grid-row: span 2;
+      }
+    }
   }
   
   @media (min-width: 481px) and (max-width: 767px){
@@ -344,7 +355,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: @small-space;
+    grid-gap: @tiny-space;
   }
 }
 .promotion-area:first-of-type{
@@ -389,6 +400,10 @@ main{
   text-decoration: none;
   padding: @tiny-space @small-space;
   border-radius: @medium-space;
+
+  &.btn-soft-pill{
+    border-radius: @tiny-space
+  }
 }
 .btn.btn-white{
   background: #fff;
@@ -403,7 +418,7 @@ main{
 }
 
 .form-input{
-  min-width: 20rem;
+
   input[type=text].input{
     padding: @tiny-space @small-space;
     border-radius: @medium-space;
@@ -421,6 +436,20 @@ main{
       color: @color;
       border-color: @color
     }
+  }
+
+  &.form-input-borderless > input.input{
+    border: none;
+  }
+  &.form-with-button{
+      .flex-space-between();
+    
+      input.input{
+        border-radius: @medium-space 0px 0px @medium-space
+      }
+      button{
+        border-radius: 0px @medium-space @medium-space 0px;
+      }
   }
 }
 section.cta {
@@ -460,7 +489,8 @@ footer {
 }
 .footer-item{
   h4{
-    margin: 0 0 @tiny-space 0;
+    margin: 0 0 @small-space 0;
+    font-weight: 600;
   }
   margin-bottom: @small-space;
 }
