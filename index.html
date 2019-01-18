@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Spas.ng</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.less">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 <body>
   <div class="contact-topbar">
     <div class="container flex-space-between">
-      <span>Need help with booking? Call 0808888268 or 01470000</span>
+      <span> <span class="hide-on-md">For booking, </span> <span class="hide-on-sm">Need help with booking?</span> Call 0808888268 or 01470000</span>
       <div>
         <i class="fab fa-facebook-f" style="margin-right: 5px;"></i>
         <i class="fab fa-twitter"></i>
@@ -22,26 +22,61 @@
     </div>
   </div>
 
-  <header class="container top-header flex-space-between">
+  <header class="container top-header flex-space-between flex-align-center">
     <a href="#">
       <img src="./assets/imgs/logo.svg" alt="SPASNG logo">
     </a>
 
-    <input type="text" name="search bar" id="search-bar" placeholder="Search for a Service Spa or Location">
+    <div class="form-input hide-on-sm">
+      <input class="input" type="text" name="search bar" id="search-bar" placeholder="Search for a Service Spa or Location">
+    </div>
+
+    <button type="button" id="mobile-nav-trigger" class="btn mobile-nav-trigger hide-on-md">
+      <span class="fas fa-bars"></span>
+    </button>
+    
   </header>
 
-  <nav class="top-nav">
-    <ul class="container flex-space-between">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Hair care</a></li>
-      <li><a href="#">Massage</a></li>
-      <li><a href="#">Skin care</a></li>
-      <li><a href="#">Salon</a></li>
-      <li><a href="#">Beauty Services</a></li>
-      <li><a href="#">Gym & Fitness</a></li>
-      <li><a href="#">Make up</a></li>
-      <li><a href="#">Manicure</a></li>
-      <li><a href="#">Pedicure</a></li>
+  <nav id="mobile-nav" class="mobile-nav hidden hide-on-md">
+    <div class="container">
+
+
+      <div class="form-input">
+        <input class="input" type="text" name="search bar" id="search-bar" placeholder="Search for a Service Spa or Location">
+      </div>
+
+      <div class="nav-items-holder">
+          <ul class="nav-items">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Hair care</a></li>
+              <li><a href="#">Massage</a></li>
+              <li><a href="#">Skin care</a></li>
+              <li><a href="#">Salon</a></li>
+              <li><a href="#">Beauty Services</a></li>
+          </ul>
+          <ul class="nav-items">
+              <li><a href="#">Gym & Fitness</a></li>
+              <li><a href="#">Make up</a></li>
+              <li><a href="#">Manicure</a></li>
+              <li><a href="#">Pedicure</a></li>
+              <li><a href="#">Exfoliation</a></li>
+            </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="top-nav hide-on-sm">
+    <ul class="container">
+      <li><a href="#">Home</a></li> |
+      <li><a href="#">Hair care</a></li> |
+      <li><a href="#">Massage</a></li> |
+      <li><a href="#">Skin care</a></li> |
+      <li><a href="#">Salon</a></li> |
+      <li><a href="#">Beauty Services</a></li> |
+      <li><a href="#">Gym & Fitness</a></li> |
+      <li><a href="#">Make up</a></li> |
+      <li><a href="#">Manicure</a></li> |
+      <li><a href="#">Pedicure</a></li> |
       <li><a href="#">Exfoliation</a></li>
     </ul>
   </nav>
@@ -372,5 +407,7 @@
       <p>2017 &copy; Spas.ng. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
