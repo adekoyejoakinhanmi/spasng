@@ -1,6 +1,8 @@
 @import "./variables.less";
 @import "./mixins.less";
 @import "./utilities.less";
+@import "./button.less";
+@import "./form-input.less";
 
 body {
   font-family: "Source Sans Pro", 'Segoe UI', sans-serif;
@@ -20,6 +22,16 @@ body {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+// Top Contact bar i.e. for booking ...
+
+.contact-topbar {
+  background-image: @primary-linear-gradient;
+  font-size: @small-font-size;
+  color: #fff;
+  padding: @tiny-space;
+}
+
 
 // Header
 
@@ -165,6 +177,25 @@ main {
 
 
 // Promotional Area
+.promotion-area {
+  padding: @large-space 0;
+
+  @media (min-width: 768px) and (max-width: 997px) {
+    padding: 4.5rem 0
+  }
+
+  @media (min-width: 998px) {
+    padding: 5.5rem 0
+  }
+
+  &::first-of-type{
+    padding-top: 160px;
+  }
+  &::nth-of-type(odd) {
+    background-color: @gray-1
+  }
+}
+
 .promotion-wrapper {
   .heading-text {
     color: @emphasis-color;
@@ -246,107 +277,8 @@ main {
   }
 }
 
-.promotion-area {
-  padding: @large-space 0;
 
-  @media (min-width: 768px) and (max-width: 997px) {
-    padding: 4.5rem 0
-  }
-
-  @media (min-width: 998px) {
-    padding: 5.5rem 0
-  }
-
-  &::first-of-type{
-    padding-top: 160px;
-  }
-  &::nth-of-type(odd) {
-    background-color: @gray-1
-  }
-}
-
-
-
-.contact-topbar {
-  background-image: @primary-linear-gradient;
-  font-size: @small-font-size;
-  color: white;
-  padding: @tiny-space;
-}
-
-.btn {
-  margin: 0;
-  border: none;
-  text-shadow: none;
-  overflow: visible;
-  font: inherit;
-  color: inherit;
-  outline: none;
-  text-transform: none;
-  display: inline-block;
-  box-sizing: border-box;
-  vertical-align: middle;
-  font-size: @base-font-size;
-  line-height: @line-height;
-  text-align: center;
-  text-decoration: none;
-  padding: @tiny-space @small-space;
-  border-radius: @medium-space;
-
-  &.btn-soft-pill {
-    border-radius: @tiny-space
-  }
-  &.btn-white {
-    background: #fff;
-    color: @emphasis-color
-  }
-  &.btn-primary {
-    color: #fff;
-    background: @soft-violet
-  }
-  &.wide {
-    padding: @tiny-space @medium-space;
-  }
-}
-
-
-.form-input {
-
-  input[type=text].input {
-    padding: @tiny-space @small-space;
-    border-radius: @medium-space;
-    font-size: @small-font-size;
-    display: inline-block;
-    color: @gray-2;
-    max-width: 100%;
-    width: 100%;
-    border: 0 none;
-    border: 1px solid @gray-2;
-    font-weight: 200;
-    outline: none;
-
-    &:focus {
-      color: @color;
-      border-color: @color
-    }
-  }
-
-  &.form-input-borderless>input.input {
-    border: none;
-  }
-
-  &.form-with-button {
-    .flex-space-between();
-
-    input.input {
-      border-radius: @medium-space 0px 0px @medium-space
-    }
-
-    button {
-      border-radius: 0px @medium-space @medium-space 0px;
-    }
-  }
-}
+// Call to Action
 
 section.cta {
   background-image: url('../assets/imgs/jumbo-footer.png');
@@ -368,6 +300,9 @@ section.cta {
     }
   }
 }
+
+
+// Footer
 
 footer {
   padding: @medium-space 0;
