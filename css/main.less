@@ -286,6 +286,27 @@ main{
   padding: @tiny-space @medium-space;
 }
 
+.form-input{
+  min-width: 20rem;
+  input[type=text].input{
+    padding: @tiny-space @small-space;
+    border-radius: @medium-space;
+    font-size: @small-font-size;
+    display: inline-block;
+    color: @gray-2;
+    max-width: 100%;
+    width: 100%;
+    border: 0 none;
+    border: 1px solid @gray-2;
+    font-weight: 200;
+    outline: none;
+
+    &:focus{
+      color: @color;
+      border-color: @color
+    }
+  }
+}
 section.cta {
   background-image: url('../assets/imgs/jumbo-footer.png');
 
