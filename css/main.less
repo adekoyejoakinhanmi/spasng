@@ -60,6 +60,10 @@ a{
   color: inherit
 }
 
+.hidden{
+  display: none;
+}
+
 .hide-on-xs{
   @media (max-width: 320px) {
     display: none
@@ -72,6 +76,17 @@ a{
   }
 }
 
+.hide-on-md{
+  @media (min-width: 481px) {
+    display: none !important;
+  }
+}
+
+.hide-on-lg{
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 .text-bold{
   font-weight: bold;
 }
@@ -84,11 +99,25 @@ a{
   .flex();
   justify-content: space-between
 }
-
+.flex-align-center{
+  .flex();
+  align-items: center;
+}
 // Header
 
 .top-header{
   padding: @normal-space 0;
+  .mobile-nav-trigger{
+    padding: @tiny-space 15px;
+    background: transparent;
+    color: inherit;
+    border-radius: 100px;
+    margin-right: @tiny-space;
+    &:hover{
+      background: @gray-1;
+    }
+  }
+
 }
 
 
@@ -97,10 +126,40 @@ a{
 .top-nav{
   background: @gray-1;
   padding: @tiny-space;
-  a{
-    text-transform: uppercase;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    
+  li {
+    display: inline-block;
+    padding: 2px 5px;
+    
+    a{
+      text-transform: uppercase;
+    }
   }
+  @media (min-width: 560px) and (max-width: 1100px) {
+    display: block;
+  }
+
 }
+}
+.mobile-nav{
+  background: @gray-1;
+  padding: @tiny-space;
+  transition: all 1s ease;
+}
+
+
+ .nav-items-holder{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin-top: @tiny-space;
+   ul li {
+     padding: 2px;
+   }
+ }
 
 .has-overlay{
   position: relative;
@@ -263,6 +322,7 @@ main{
   overflow: visible;
   font: inherit;
   color: inherit;
+  outline: none;
   text-transform: none;
   display: inline-block;
   box-sizing: border-box;
